@@ -1,0 +1,4 @@
+name = Doorbell.io
+description = Custom module to expose username and email address to doorbell.io
+core = 7.x
+package = Stanford

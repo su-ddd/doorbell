@@ -1,0 +1,15 @@
+<?php
+
+function doorbell_init() {
+  global $user;
+
+  $username = (isset($user->name) ? $user->name : 'anonymous');
+  $email    = (isset($user->mail) ? $user->mail : 'nobody@stanford.edu');
+
+  $user_info = array(
+    'userName' => $username,
+    'userEmail' => $email,
+  );
+
+  drupal_add_js(array('doorbell' => $user_info), 'setting');
+}
